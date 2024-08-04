@@ -15,3 +15,6 @@ jobs, so I'll use that to filter heavily.
 
 The goal is to help students find cool jobs, so me and the other editors 
 will be ruthless! 
+
+## User flow diagram
+![user-flow](Diagram user flow.png)
