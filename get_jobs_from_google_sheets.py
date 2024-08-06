@@ -12,7 +12,7 @@ SCOPES = ["https://www.googleapis.com/auth/spreadsheets.readonly"]
 # The ID and range of a sample spreadsheet.
 # SAMPLE_SPREADSHEET_ID = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms"
 SAMPLE_SPREADSHEET_ID = "1Y3Ao9Yg6jU86v0FqBPJGLlpwK_xQ3_brwWG7muhWWrI"
-SAMPLE_RANGE_NAME = "A1:F4"
+SAMPLE_RANGE_NAME = "Sheet1"
 
 
 def get_jobs_from_google_sheets():
