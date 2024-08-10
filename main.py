@@ -1,6 +1,6 @@
 from fasthtml import common as fh
 from utility_components import Hero, job_list, job_row
-from get_jobs_from_google_sheets import get_jobs_from_google_sheets
+from dataclasses import dataclass
 
 css = fh.Style(':root { --pico-font-size: 100%; --pico-font-family: Pacifico, cursive;}')
 
@@ -19,10 +19,6 @@ app, rt, jobs, Job = fh.fast_app('jobs.db', hdrs=(fh.picolink, css), live=True, 
                         )
 
 submitted_jobs = []
-
-from dataclasses import dataclass
-import pandas as pd 
-import numpy as np 
 
 
 count = 0
