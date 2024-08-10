@@ -1,6 +1,5 @@
 from fasthtml import common as fh
-from utility_components import Hero, job_list, job_row
-from dataclasses import dataclass
+from utility_components import Hero
 
 css = fh.Style(':root { --pico-font-size: 100%; --pico-font-family: Pacifico, cursive;}')
 
@@ -24,29 +23,11 @@ submitted_jobs = []
 count = 0
 @rt("/")
 def get():
-    # # Generate random data
-    # data = np.random.rand(5, 4)  # 5 rows and 4 columns
-    # # Create a DataFrame with the random data
-    # df = pd.DataFrame(data, columns=['A', 'B', 'C', 'D'])
-    # jobs.insert(Job(title="Test job", 
-    #                 description="cool job",
-    #                 link="google.com",
-    #                 salary_range="1-2 USD",
-    #                 why_is_cool="because",
-    #                 email="me@me.com" ))
-    
-    # return fh.Titled('Jobs',
-    #               fh.Ul(*jobs()),
-    #             )
     return fh.Title("Cool Math Jobs"), fh.Main(
         fh.Titled("",
             Hero("Cool Math Jobs", "Find a fun job for your brain"),
             fh.P(fh.A(fh.Button("Submit a job"), href="/submit_job")),
             fh.Card(fh.Ul(*jobs())),
-            # fh.P(f"Count is set to {count}", id="count"),
-            # fh.Button("Submit a job", hx_get="/submit_job", hx_target="#count", hx_swap="innerHTML"),
-            
-            # Div(NotStr(df.to_html())) 
         ), 
         cls="container"
     )
